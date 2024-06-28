@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="calculator" name="calc">
+            <button id="moreButton" class="more-btn" type="button" onclick="toggleHiddenKeys()">More</button>
+            <div class="input-area">
+                <input type="text" readonly class="value" name="txt" />
+            </div>
+
+            <div class="num" onclick="calc.txt.value = ''">C</div>
+            <div class="num" onclick="backspace()">⌫</div>
+            <div class="num" onclick="document.calc.txt.value +='%'">%</div>
+            <div class="num" onclick="document.calc.txt.value +='÷'">÷</div>
+
+            <div class="num" onclick="document.calc.txt.value +='7'">7</div>
+            <div class="num" onclick="document.calc.txt.value +='8'">8</div>
+            <div class="num" onclick="document.calc.txt.value +='9'">9</div>
+            <div class="num" onclick="document.calc.txt.value +='×'">×</div>
+
+            <div class="num" onclick="document.calc.txt.value +='4'">4</div>
+            <div class="num" onclick="document.calc.txt.value +='5'">5</div>
+            <div class="num" onclick="document.calc.txt.value +='6'">6</div>
+            <div class="num" onclick="document.calc.txt.value +='-'">-</div>
+
+            <div class="num" onclick="document.calc.txt.value +='1'">1</div>
+            <div class="num" onclick="document.calc.txt.value +='2'">2</div>
+            <div class="num" onclick="document.calc.txt.value +='3'">3</div>
+            <div class="num" onclick="document.calc.txt.value +='+ '">+</div>
+
+            <div class="num" onclick="toggleParenthesis()">( )</div>
+            <div class="num" onclick="document.calc.txt.value +='0'">0</div>
+            <div class="num" onclick="document.calc.txt.value +='.'">.</div>
+            <div class="num" onclick="document.calc.txt.value = extendedCalculate(document.calc.txt.value)">=</div>
+
+            <div class="advance key-hidden" id="sin" onclick="sinFunction()">sin</div>
+            <div class="advance key-hidden" id="cos" onclick="cosFunction()">cos</div>
+            <div class="advance key-hidden" id="tan" onclick="tanFunction()">tan</div>
+            <div class="advance key-hidden" id="log" onclick="logFunction()">log</div>
+
+            <div class="advance key-hidden" id="mod" onclick="modFunction()">mod</div>
+            <div class="advance key-hidden" id="pow" onclick="powFunction()">^</div>
+            <div class="advance key-hidden" id="pi" onclick="insertPi()">π</div>
+            <div class="advance key-hidden" id="sqrt" onclick="sqrtFunction()">√</div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
